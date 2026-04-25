@@ -158,8 +158,6 @@ const ProcessSection = () => {
       id="process"
       className="relative overflow-hidden bg-transparent px-5 py-12 text-white sm:px-6 lg:px-10 xl:px-14"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(195,204,155,0.055),transparent_30%)]" />
-
       <div className="relative z-10 mx-auto w-full max-w-[1120px]">
         {/* Top Stepper */}
         <motion.div

@@ -1,4 +1,5 @@
 import ExperienceTimeline from "@/components/Experience";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/NavBar";
 import ProcessSection from "@/components/ProcessSection";
@@ -11,6 +12,7 @@ const HomePage = () => {
       <Projects />
       <ExperienceTimeline />
       <ProcessSection />
+      <Footer />
     </main>
   );
 };

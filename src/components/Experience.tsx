@@ -33,7 +33,7 @@ const ExperienceTimeline = () => {
       className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8"
     >
       {/* Soft Background Glow */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--accent)]/8 blur-[120px]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-90 w-90 -translate-x-1/2 -translate-y-1/2 rounded-full bg-(--accent)/8 blur-[120px]" />
 
       <div className="mx-auto max-w-6xl">
         <motion.div
@@ -43,7 +43,7 @@ const ExperienceTimeline = () => {
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="mb-14 text-center"
         >
-          <p className="mx-auto mb-4 w-fit rounded-full border border-[rgba(195,204,155,0.25)] bg-white/[0.045] px-4 py-2 text-sm font-semibold text-[var(--accent)] backdrop-blur-xl">
+          <p className="mx-auto mb-4 w-fit rounded-full border border-[rgba(195,204,155,0.25)] bg-white/4.5 px-4 py-2 text-sm font-semibold text-(--accent) backdrop-blur-xl">
             Career Journey
           </p>
 
@@ -59,13 +59,13 @@ const ExperienceTimeline = () => {
 
         <div className="relative mx-auto max-w-5xl">
           {/* Timeline Line */}
-          <div className="absolute bottom-0 left-[15px] top-0 w-[3px] overflow-hidden rounded-full bg-white/15 shadow-[0_0_22px_rgba(195,204,155,0.10)] sm:left-[23px] md:left-1/2 md:-translate-x-1/2">
+          <div className="absolute bottom-0 left-3.75 top-0 w-0.75 overflow-hidden rounded-full bg-white/15 shadow-[0_0_22px_rgba(195,204,155,0.10)] sm:left-5.75 md:left-1/2 md:-translate-x-1/2">
             <motion.div
               initial={{ height: 0 }}
               whileInView={{ height: "100%" }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 1.35, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-x-0 top-0 rounded-full bg-gradient-to-b from-[#E7EDC8] via-[#2c7678] to-cyan-400/60 shadow-[0_0_18px_rgba(195,204,155,0.35)]"
+              className="absolute inset-x-0 top-0 rounded-full bg-linear-to-b from-[#E7EDC8] via-[#2c7678] to-cyan-400/60 shadow-[0_0_18px_rgba(195,204,155,0.35)]"
             />
           </div>
 
@@ -85,7 +85,7 @@ const ExperienceTimeline = () => {
                       duration: 0.45,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="absolute left-[11px] top-7 z-10 sm:left-[19px] md:left-1/2 md:-translate-x-1/2"
+                    className="absolute left-2.75 top-7 z-10 sm:left-4.75 md:left-1/2 md:-translate-x-1/2"
                   >
                     <span className="block h-3.5 w-3.5 rounded-full border border-white/50 bg-white/40 shadow-[0_0_18px_rgba(195,204,155,0.45)] backdrop-blur-md" />
                   </motion.div>
@@ -112,8 +112,8 @@ const ExperienceTimeline = () => {
                       isLeft ? "md:mr-[54%] md:text-right" : "md:ml-[54%]"
                     }`}
                   >
-                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.055] p-5 shadow-[0_18px_50px_rgba(0,0,0,0.22)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[var(--accent)]/30 hover:bg-white/[0.08] sm:p-6">
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-[var(--accent)]/[0.035] opacity-0 transition duration-300 group-hover:opacity-100" />
+                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5.5 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.22)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-(--accent)/30 hover:bg-white/8 sm:p-6">
+                      <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-white/8 via-transparent to-(--accent)/[0.035] opacity-0 transition duration-300 group-hover:opacity-100" />
 
                       <div className="relative">
                         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#C3CC9B]/90 sm:text-sm">

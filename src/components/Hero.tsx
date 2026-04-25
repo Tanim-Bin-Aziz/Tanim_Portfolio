@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-12 xl:gap-16">
         {/* Left Content */}
         <div className="mx-auto w-full max-w-3xl text-center lg:mx-0 lg:text-left">
-          <p className="mx-auto mb-5 w-fit rounded-full border border-[rgba(195,204,155,0.28)] bg-white/[0.045] px-[15px] py-2 text-xs font-semibold tracking-[0.01em] text-[var(--accent)] backdrop-blur-xl sm:text-sm lg:mx-0">
+          <p className="mx-auto mb-5 w-fit rounded-full border border-[rgba(195,204,155,0.28)] bg-white/4.5 px-3.75 py-2 text-xs font-semibold tracking-[0.01em] text-(--accent) backdrop-blur-xl sm:text-sm lg:mx-0">
             Junior Full Stack Developer
           </p>
 
@@ -42,19 +42,17 @@ const Hero = () => {
             ].map((skill) => (
               <span
                 key={skill}
-                className="rounded-full border border-white/10 bg-white/[0.045] px-3.5 py-2 text-xs font-medium text-white/75 backdrop-blur-xl transition hover:border-[var(--accent)]/40 hover:text-[var(--accent)] sm:px-4 sm:text-sm"
+                className="rounded-full border border-white/10 bg-white/4.5 px-3.5 py-2 text-xs font-medium text-white/75 backdrop-blur-xl transition hover:border-(--accent)/40 hover:text-(--accent) sm:px-4 sm:text-sm"
               >
                 {skill}
               </span>
             ))}
           </div>
 
-          {/* Buttons */}
-          {/* Buttons */}
           <div className="mt-5 flex justify-center gap-4 lg:justify-start">
             <a
               href="#projects"
-              className="group inline-flex h-11 w-[170px] items-center justify-center rounded-full bg-[var(--accent)] px-5 text-xs font-bold text-[#071717] shadow-[0_18px_45px_rgba(195,204,155,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(195,204,155,0.28)] sm:h-auto sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm"
+              className="group inline-flex h-11 w-42.5 items-center justify-center rounded-full bg-(--accent) px-5 text-xs font-bold text-[#071717] shadow-[0_18px_45px_rgba(195,204,155,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(195,204,155,0.28)] sm:h-auto sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm"
             >
               View Projects
               <span className="ml-1.5 transition duration-300 group-hover:translate-x-1 sm:ml-2">
@@ -64,7 +62,7 @@ const Hero = () => {
 
             <a
               href="#contact"
-              className="hidden items-center justify-center rounded-full border border-white/12 bg-white/[0.045] px-7 py-3.5 text-sm font-bold text-white backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[var(--accent)]/45 hover:text-[var(--accent)] sm:inline-flex"
+              className="hidden items-center justify-center rounded-full border border-white/12 bg-white/4.5 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-(--accent)/45 hover:text-(--accent) sm:inline-flex"
             >
               Contact Me
             </a>
@@ -102,7 +100,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={item.label}
-                  className="group inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.045] text-white/70 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[var(--accent)]/45 hover:bg-[var(--accent)]/10 hover:text-[var(--accent)] hover:shadow-[0_18px_45px_rgba(195,204,155,0.12)] sm:h-12 sm:w-12"
+                  className="group inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/4.5 text-white/70 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-(--accent)/45 hover:bg-(--accent)/10 hover:text-(--accent) hover:shadow-[0_18px_45px_rgba(195,204,155,0.12)] sm:h-12 sm:w-12"
                 >
                   <Icon className="text-[17px] transition duration-300 group-hover:scale-110 sm:text-[18px]" />
                 </a>
@@ -112,7 +110,7 @@ const Hero = () => {
         </div>
 
         {/* Right Skill Area */}
-        <div className="mx-auto w-full max-w-[340px] pb-10 sm:max-w-[520px] md:max-w-[620px] lg:mx-0 lg:max-w-none lg:pb-0">
+        <div className="mx-auto w-full max-w-85 pb-10 sm:max-w-130 md:max-w-155 lg:mx-0 lg:max-w-none lg:pb-0">
           <Skill />
         </div>
       </div>

@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import ExperienceTimeline from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Projects />
       <ExperienceTimeline />
       <ProcessSection />
+      <Contact />
       <Footer />
     </main>
   );

@@ -155,10 +155,10 @@ const ProcessSection = () => {
 
   return (
     <section
-      id="process"
+      id="about"
       className="relative overflow-hidden bg-transparent px-5 py-12 text-white sm:px-6 lg:px-10 xl:px-14"
     >
-      <div className="relative z-10 mx-auto w-full max-w-[1120px]">
+      <div className="relative z-10 mx-auto w-full max-w-280">
         {/* Top Stepper */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -182,7 +182,7 @@ const ProcessSection = () => {
                   className="group relative flex flex-col items-center gap-2 text-center"
                 >
                   <span
-                    className={`relative z-10 flex h-11 w-11 items-center justify-center rounded-full border text-sm font-bold transition-all duration-300 sm:h-12 sm:w-12 md:h-[52px] md:w-[52px] ${
+                    className={`relative z-10 flex h-11 w-11 items-center justify-center rounded-full border text-sm font-bold transition-all duration-300 sm:h-12 sm:w-12 md:h-13 md:w-13 ${
                       isActive
                         ? "border-white bg-white text-black shadow-[0_0_0_7px_rgba(255,255,255,0.07)]"
                         : isCompleted
@@ -221,7 +221,7 @@ const ProcessSection = () => {
               animate="animate"
               exit="exit"
               transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
-              className="w-full ml-6 lg:ml-14 max-w-[330px] justify-self-start"
+              className="w-full ml-6 lg:ml-14 max-w-82.5 justify-self-start"
             >
               <div className="mb-3 flex items-center gap-2 text-sm font-medium text-white/75">
                 <span>Step</span>
@@ -253,7 +253,7 @@ const ProcessSection = () => {
                 </h2>
               </div>
 
-              <p className="mt-5 max-w-[330px] text-base leading-7 text-white/72">
+              <p className="mt-5 max-w-82.5 text-base leading-7 text-white/72">
                 {activeStep.description}
               </p>
 

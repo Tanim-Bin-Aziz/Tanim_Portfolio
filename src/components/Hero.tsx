@@ -5,6 +5,8 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import Skill from "./Skill";
+import Image from "next/image";
+import logo from "../../public/AI Logo.png";
 
 const Hero = () => {
   return (
@@ -15,10 +17,18 @@ const Hero = () => {
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-12 xl:gap-16">
         {/* Left Content */}
         <div className="mx-auto w-full max-w-3xl text-center lg:mx-0 lg:text-left">
-          <p className="mx-auto mb-5 w-fit rounded-full border border-[rgba(195,204,155,0.28)] bg-white/4.5 px-3.75 py-2 text-xs font-semibold tracking-[0.01em] text-(--accent) backdrop-blur-xl sm:text-sm lg:mx-0">
-            Junior Full Stack Developer
-          </p>
+          <p className="mx-auto mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-[rgba(195,204,155,0.28)] bg-white/4.5 px-3.75 py-2 text-xs font-semibold tracking-[0.01em] text-(--accent) backdrop-blur-xl sm:text-sm lg:mx-0">
+            <Image
+              src={logo}
+              alt="AI Logo"
+              width={18}
+              height={18}
+              className="h-4.5 w-4.5 shrink-0 object-contain"
+              priority
+            />
 
+            <span>Junior Full Stack Developer</span>
+          </p>
           <h1 className="mx-auto max-w-4xl text-[42px] font-bold leading-[1.05] tracking-[-0.04em] text-white sm:text-5xl md:text-6xl lg:mx-0 lg:text-6xl xl:text-7xl">
             Hello, I&apos;m <br />
             <span className="text-[#C2D099]">Tanim Bin Aziz</span>

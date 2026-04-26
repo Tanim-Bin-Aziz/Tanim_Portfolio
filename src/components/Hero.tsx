@@ -42,7 +42,7 @@ const Hero = () => {
             ].map((skill) => (
               <span
                 key={skill}
-                className="rounded-full border border-white/10 bg-white/4.5 px-3.5 py-2 text-xs font-medium text-white/75 backdrop-blur-xl transition hover:border-(--accent)/40 hover:text-(--accent) sm:px-4 sm:text-sm"
+                className="rounded-full border border-white/10 bg-white/4.5 px-3.5 py-2 text-xs font-medium text-[#C2D099] backdrop-blur-xl transition hover:border-(--accent)/40 hover:text-(--accent) sm:px-4 sm:text-sm"
               >
                 {skill}
               </span>
@@ -100,7 +100,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={item.label}
-                  className="group inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/4.5 text-white/70 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-(--accent)/45 hover:bg-(--accent)/10 hover:text-(--accent) hover:shadow-[0_18px_45px_rgba(195,204,155,0.12)] sm:h-12 sm:w-12"
+                  className="group inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/4.5 text-[#C2D099] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-(--accent)/45 hover:bg-(--accent)/10 hover:text-(--accent) hover:shadow-[0_18px_45px_rgba(195,204,155,0.12)] sm:h-12 sm:w-12"
                 >
                   <Icon className="text-[17px] transition duration-300 group-hover:scale-110 sm:text-[18px]" />
                 </a>

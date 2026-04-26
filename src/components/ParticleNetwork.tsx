@@ -16,7 +16,6 @@ type Settings = {
   DOT_SIZE: number;
   ALPHA: number;
   FPS_LIMIT: number;
-  DPR: number;
 };
 
 const ParticleNetwork = () => {
@@ -25,24 +24,30 @@ const ParticleNetwork = () => {
   const particlesRef = useRef<Particle[]>([]);
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 640;
+
+    // Mobile device e particle fully off
+    if (isMobile) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
+    const DPR = Math.min(window.devicePixelRatio || 1, 1.5);
+
     const getSettings = (): Settings => {
-      const isMobile = window.innerWidth < 640;
       const isTablet = window.innerWidth < 1024;
 
       return {
-        MAX_PARTICLES: isMobile ? 42 : isTablet ? 120 : 220,
-        LINK_DIST: isMobile ? 75 : isTablet ? 115 : 145,
-        SPEED: isMobile ? 0.18 : 0.34,
-        DOT_SIZE: isMobile ? 1.25 : 1.45,
-        ALPHA: isMobile ? 0.22 : 0.22,
-        FPS_LIMIT: isMobile ? 40 : 60,
-        DPR: Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 1.5),
+        // Desktop/tablet same as before
+        MAX_PARTICLES: isTablet ? 120 : 220,
+        LINK_DIST: isTablet ? 115 : 145,
+        SPEED: 0.34,
+        DOT_SIZE: 1.45,
+        ALPHA: 0.22,
+        FPS_LIMIT: 60,
       };
     };
 
@@ -77,14 +82,14 @@ const ParticleNetwork = () => {
       const w = parent?.clientWidth || window.innerWidth;
       const h = parent?.clientHeight || window.innerHeight;
 
-      settings = getSettings();
-
-      canvas.width = Math.floor(w * settings.DPR);
-      canvas.height = Math.floor(h * settings.DPR);
+      canvas.width = Math.floor(w * DPR);
+      canvas.height = Math.floor(h * DPR);
       canvas.style.width = `${w}px`;
       canvas.style.height = `${h}px`;
 
-      ctx.setTransform(settings.DPR, 0, 0, settings.DPR, 0, 0);
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+
+      settings = getSettings();
 
       if (particlesRef.current.length > settings.MAX_PARTICLES) {
         particlesRef.current = particlesRef.current.slice(
@@ -251,7 +256,7 @@ const ParticleNetwork = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none absolute inset-0 h-full w-full"
+      className="pointer-events-none absolute inset-0 hidden h-full w-full sm:block"
       aria-hidden="true"
     />
   );

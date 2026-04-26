@@ -16,6 +16,7 @@ type Settings = {
   DOT_SIZE: number;
   ALPHA: number;
   FPS_LIMIT: number;
+  DPR: number;
 };
 
 const ParticleNetwork = () => {
@@ -30,19 +31,18 @@ const ParticleNetwork = () => {
     const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
-    const DPR = Math.min(window.devicePixelRatio || 1, 1.5);
-
     const getSettings = (): Settings => {
       const isMobile = window.innerWidth < 640;
       const isTablet = window.innerWidth < 1024;
 
       return {
-        MAX_PARTICLES: isMobile ? 75 : isTablet ? 120 : 220,
-        LINK_DIST: isMobile ? 105 : isTablet ? 115 : 145,
-        SPEED: isMobile ? 0.24 : 0.34,
-        DOT_SIZE: isMobile ? 1.45 : 1.45,
-        ALPHA: isMobile ? 0.26 : 0.22,
-        FPS_LIMIT: 60,
+        MAX_PARTICLES: isMobile ? 42 : isTablet ? 120 : 220,
+        LINK_DIST: isMobile ? 75 : isTablet ? 115 : 145,
+        SPEED: isMobile ? 0.18 : 0.34,
+        DOT_SIZE: isMobile ? 1.25 : 1.45,
+        ALPHA: isMobile ? 0.22 : 0.22,
+        FPS_LIMIT: isMobile ? 40 : 60,
+        DPR: Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 1.5),
       };
     };
 
@@ -77,14 +77,14 @@ const ParticleNetwork = () => {
       const w = parent?.clientWidth || window.innerWidth;
       const h = parent?.clientHeight || window.innerHeight;
 
-      canvas.width = Math.floor(w * DPR);
-      canvas.height = Math.floor(h * DPR);
+      settings = getSettings();
+
+      canvas.width = Math.floor(w * settings.DPR);
+      canvas.height = Math.floor(h * settings.DPR);
       canvas.style.width = `${w}px`;
       canvas.style.height = `${h}px`;
 
-      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-
-      settings = getSettings();
+      ctx.setTransform(settings.DPR, 0, 0, settings.DPR, 0, 0);
 
       if (particlesRef.current.length > settings.MAX_PARTICLES) {
         particlesRef.current = particlesRef.current.slice(

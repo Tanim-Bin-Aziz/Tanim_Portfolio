@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -9,70 +10,22 @@ type SkillItem = {
 };
 
 const skills: SkillItem[] = [
-  {
-    name: "Git",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-  },
-  {
-    name: "Postman",
-    logo: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
-  },
-  {
-    name: "Docker",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
-  },
-  {
-    name: "Express",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
-  },
-  {
-    name: "Github",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
-  },
-  {
-    name: "MongoDB",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
-  },
-  {
-    name: "Firebase",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
-  },
-  {
-    name: "React",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  {
-    name: "Linux",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-  },
-  {
-    name: "AWS",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-  },
-  {
-    name: "PostgreSQL",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-  },
-  {
-    name: "TypeScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-  {
-    name: "Node.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg",
-  },
-  {
-    name: "Figma",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-  },
-  {
-    name: "VS Code",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-  },
-  {
-    name: "JavaScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
+  { name: "Git", logo: "/icons/git.svg" },
+  { name: "Postman", logo: "/icons/postman.svg" },
+  { name: "Docker", logo: "/icons/docker.svg" },
+  { name: "Express", logo: "/icons/express.svg" },
+  { name: "Github", logo: "/icons/github.svg" },
+  { name: "MongoDB", logo: "/icons/mongodb.svg" },
+  { name: "Firebase", logo: "/icons/firebase.svg" },
+  { name: "React", logo: "/icons/react.svg" },
+  { name: "Linux", logo: "/icons/linux.svg" },
+  { name: "AWS", logo: "/icons/aws.svg" },
+  { name: "PostgreSQL", logo: "/icons/postgresql.svg" },
+  { name: "TypeScript", logo: "/icons/typescript.svg" },
+  { name: "Node.js", logo: "/icons/nodejs.svg" },
+  { name: "Figma", logo: "/icons/figma.svg" },
+  { name: "VS Code", logo: "/icons/vscode.svg" },
+  { name: "JavaScript", logo: "/icons/javascript.svg" },
 ];
 
 const shuffleArray = (arr: SkillItem[]): SkillItem[] => {
@@ -113,12 +66,15 @@ const Skill = () => {
               }}
               className="flex aspect-square w-full flex-col items-center justify-center rounded-[7px] border border-white/20 bg-white/10 p-2 backdrop-blur-lg transition-colors duration-300 hover:border-[var(--accent)]/40 hover:bg-white/[0.14] sm:rounded-xl sm:p-3 lg:h-[88px] lg:w-[88px] lg:p-2 xl:h-[96px] xl:w-[96px]"
             >
-              <div className="mb-1 flex h-[62%] w-[62%] items-center justify-center sm:h-3/4 sm:w-3/4 lg:h-3/5 lg:w-3/5">
-                <img
+              <div className="relative mb-1 h-[62%] w-[62%] sm:h-3/4 sm:w-3/4 lg:h-3/5 lg:w-3/5">
+                <Image
                   src={item.logo}
                   alt={item.name}
-                  loading="lazy"
-                  className="h-full w-full object-contain"
+                  fill
+                  sizes="(max-width: 640px) 20vw, (max-width: 1024px) 12vw, 58px"
+                  unoptimized
+                  draggable={false}
+                  className="object-contain"
                 />
               </div>
 

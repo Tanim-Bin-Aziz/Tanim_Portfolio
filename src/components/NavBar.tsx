@@ -185,7 +185,7 @@ const Navbar = () => {
               })}
 
               <a
-                href="/resume/Tanim Bin Aziz Resume.pdf"
+                href="/resume/Tanim Bin Aziz.pdf"
                 download
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-(--accent) px-4 py-2 text-sm font-semibold text-[#071717] transition-transform duration-300 hover:scale-[1.02]"

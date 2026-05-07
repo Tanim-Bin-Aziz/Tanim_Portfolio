@@ -32,7 +32,6 @@ const ExperienceTimeline = () => {
       id="experience"
       className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8"
     >
-      {/* Soft Background Glow */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-90 w-90 -translate-x-1/2 -translate-y-1/2 rounded-full bg-(--accent)/8 blur-[120px]" />
 
       <div className="mx-auto max-w-6xl">

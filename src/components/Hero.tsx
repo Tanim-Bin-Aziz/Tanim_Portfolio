@@ -11,8 +11,6 @@ import Image from "next/image";
 import logo from "../../public/AI Logo.png";
 import { motion } from "framer-motion";
 
-/* ---------- ANIMATION VARIANTS ---------- */
-
 const blurUp = {
   hidden: {
     opacity: 0,
@@ -65,7 +63,7 @@ const Hero = () => {
               className="h-4.5 w-4.5 shrink-0 object-contain"
               priority
             />
-            <span>Junior Full Stack Developer</span>
+            <span>Junior Software Engineer</span>
           </motion.p>
 
           {/* Title */}

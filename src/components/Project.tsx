@@ -77,14 +77,14 @@ const projects: Project[] = [
     status: "completed",
   },
   {
-    title: "Hotel Management System",
+    title: "Transport Management System",
     description:
-      "Complete hotel management system with booking, check-in/check-out, billing, invoice generation, and admin dashboard.",
-    technologies: ["PHP", "Laravel", "MySQL", "Blade"],
-    liveLink: "",
-    codeLink: "https://github.com/Tanim-Bin-Aziz/hotel-management",
+      "A full-featured transport management frontend built with React and TypeScript. Includes transport tracking, route management, and an intuitive dashboard interface.",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    liveLink: "https://transport-frontend-pi.vercel.app",
+    codeLink: "https://github.com/Tanim-Bin-Aziz/transport_frontend",
     image:
-      "https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/32322673/pexels-photo-32322673.jpeg?auto=compress&cs=tinysrgb&w=1200",
     status: "completed",
   },
 ];

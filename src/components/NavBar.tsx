@@ -126,7 +126,7 @@ const Navbar = () => {
         {/* Right Action - Desktop */}
         <div className="hidden justify-self-end md:block">
           <a
-            href="/resume/Tanim-Bin-Aziz-Resume.pdf"
+            href="/resume/Tanim Bin Aziz.pdf"
             download
             className="group inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-(--accent)/35 bg-(--accent)/15 px-4 py-2 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] transition-all duration-300 hover:bg-(--accent) hover:text-[#071717]"
           >

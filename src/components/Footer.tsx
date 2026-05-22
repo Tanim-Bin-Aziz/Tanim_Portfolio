@@ -13,7 +13,7 @@ const Footer = () => {
           className="mt-2 font-carlito text-sm md:text-base"
           style={{ color: "rgba(231,237,200,0.58)" }}
         >
-          Built with React & Motion
+          Built with Next.Js & Framer Motion
         </p>
 
         <div

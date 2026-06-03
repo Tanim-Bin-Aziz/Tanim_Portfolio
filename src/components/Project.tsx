@@ -62,8 +62,7 @@ const projects: Project[] = [
     ],
     liveLink: "https://health-app-psi-one.vercel.app",
     codeLink: "https://github.com/Tanim-Bin-Aziz/health_app",
-    image:
-      "https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: "/images/projects/hospital.png",
     status: "completed",
   },
   {

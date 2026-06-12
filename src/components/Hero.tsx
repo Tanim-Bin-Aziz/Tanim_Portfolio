@@ -63,7 +63,7 @@ const Hero = () => {
               className="h-4.5 w-4.5 shrink-0 object-contain"
               priority
             />
-            <span>Junior Software Engineer</span>
+            <span>Software Engineer</span>
           </motion.p>
 
           {/* Title */}

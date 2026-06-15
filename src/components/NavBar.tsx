@@ -117,6 +117,8 @@ const Navbar = () => {
         {/* Brand */}
         <Link
           href="#home"
+          aria-label="Tanim Bin Aziz - Software Engineer"
+          title="Tanim Bin Aziz - Software Engineer"
           onClick={() => handleNavClick("home")}
           className="min-w-0 truncate text-lg font-bold text-(--accent) transition-colors duration-300 hover:text-[#DDE8AE] sm:text-xl md:justify-self-center md:text-center"
         >
@@ -128,6 +130,7 @@ const Navbar = () => {
           <a
             href="/resume/Tanim Bin Aziz.pdf"
             download
+            aria-label="Download Tanim Bin Aziz Software Engineer Resume"
             className="group inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-(--accent)/35 bg-(--accent)/15 px-4 py-2 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] transition-all duration-300 hover:bg-(--accent) hover:text-[#071717]"
           >
             <Download className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />

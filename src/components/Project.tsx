@@ -11,6 +11,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { DiGithub } from "react-icons/di";
+import { FiArrowUpRight, FiGithub } from "react-icons/fi";
 
 type ProjectStatus = "completed" | "in-progress" | "planning";
 
@@ -126,8 +127,8 @@ const ProjectCard = ({
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent)]/10 to-[#194547]/25 mix-blend-overlay" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-br from-(--accent)/10 to-[#194547]/25 mix-blend-overlay" />
 
           <div
             className={`absolute left-4 top-4 z-20 flex items-center gap-1.5 rounded-xl border px-2.5 py-1 text-xs font-medium backdrop-blur-sm ${status.className}`}
@@ -152,7 +153,7 @@ const ProjectCard = ({
               {project.technologies.slice(0, 3).map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-lg border border-[rgba(195,204,155,0.22)] bg-[linear-gradient(135deg,rgba(195,204,155,0.14),rgba(25,69,71,0.18))] px-2.5 py-1 text-[10px] font-semibold text-[#E7EDC8]"
+                  className="rounded-md border border-[rgba(195,204,155,0.22)] bg-[linear-gradient(135deg,rgba(195,204,155,0.14),rgba(25,69,71,0.18))] px-2.5 py-1 text-[10px] font-semibold text-[#E7EDC8]"
                 >
                   {tech}
                 </span>
@@ -167,18 +168,18 @@ const ProjectCard = ({
           </div>
 
           {/* Actions */}
-          <div className="mt-5 flex gap-3">
+          <div className="mt-5 flex items-center gap-2">
             <Link
               href={projectUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-2xl border border-[rgba(195,204,155,0.22)] bg-[linear-gradient(135deg,rgba(195,204,155,0.16),rgba(25,69,71,0.28))] px-4 py-2 text-xs font-bold text-[#F4F7E8] shadow-[0_10px_30px_rgba(25,69,71,0.22)] backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02]"
+              className="group inline-flex h-10 items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 text-sm font-medium text-[#F4F7E8] backdrop-blur-xl transition-all duration-300 hover:border-[#C3CC9B]/30 hover:bg-white/10"
             >
-              <span className="absolute inset-0 rounded-2xl bg-[linear-gradient(135deg,rgba(255,255,255,0.14),rgba(255,255,255,0.03))]" />
-              <span className="relative z-10 flex items-center gap-2">
-                <ExternalLink size={16} />
-                View Project
-              </span>
+              <FiArrowUpRight
+                size={16}
+                className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+              Live Demo
             </Link>
 
             <Link
@@ -186,16 +187,19 @@ const ProjectCard = ({
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View source code on GitHub"
-              className="relative flex items-center justify-center overflow-hidden rounded-2xl border border-[rgba(195,204,155,0.18)] bg-[linear-gradient(135deg,rgba(195,204,155,0.10),rgba(25,69,71,0.24))] p-3 text-[#DCE5B5] shadow-[0_10px_25px_rgba(25,69,71,0.18)] backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:scale-[1.04]"
+              className="group inline-flex h-10 px-4 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 text-[#C3CC9B] backdrop-blur-xl transition-all duration-300 hover:border-[#C3CC9B]/30 hover:bg-white/10"
             >
-              <span className="absolute inset-0 rounded-2xl bg-[linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.02))]" />
-              <DiGithub size={18} className="relative z-10" />
+              <FiGithub
+                size={17}
+                className="transition-transform duration-300 group-hover:scale-110"
+              />
+              <span className="text-sm font-medium">Code</span>
             </Link>
           </div>
         </div>
 
         {/* Shimmer */}
-        <div className="pointer-events-none absolute inset-0 -translate-x-[120%] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.10),transparent)] opacity-0 transition duration-700 group-hover:translate-x-[120%] group-hover:opacity-100" />
+        <div className="pointer-events-none absolute inset-0 translate-x-[-120%] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.10),transparent)] opacity-0 transition duration-700 group-hover:translate-x-[120%] group-hover:opacity-100" />
       </div>
     </motion.article>
   );

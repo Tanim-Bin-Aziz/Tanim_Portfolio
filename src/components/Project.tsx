@@ -3,14 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-  ExternalLink,
-  Clock,
-  CheckCircle2,
-  Lightbulb,
-  type LucideIcon,
-} from "lucide-react";
-import { DiGithub } from "react-icons/di";
+import { Clock, CheckCircle2, Lightbulb, type LucideIcon } from "lucide-react";
+
 import { FiArrowUpRight, FiGithub } from "react-icons/fi";
 
 type ProjectStatus = "completed" | "in-progress" | "planning";

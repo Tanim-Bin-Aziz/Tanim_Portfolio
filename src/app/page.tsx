@@ -31,10 +31,20 @@ const HomePage = () => {
     url: "https://tanim-bin-aziz.vercel.app",
     // image: "https://yourwebsite.com/photo.jpg",
     description:
-      "I am Tanim Bin Aziz, a Software Engineer with experience in Full Stack Development.",
+      "Tanim Bin Aziz, a Software Engineer with experience in Full Stack Development.",
+
     sameAs: [
       "https://github.com/Tanim-Bin-Aziz",
       "https://linkedin.com/in/tanim-bin-aziz",
+    ],
+    knowsAbout: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "MongoDB",
     ],
   };
 

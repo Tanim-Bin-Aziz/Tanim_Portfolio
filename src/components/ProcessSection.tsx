@@ -167,7 +167,7 @@ const ProcessSection = () => {
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="relative mb-10"
         >
-          <div className="absolute left-[6%] right-[6%] top-[25px] hidden h-px bg-white/12 md:block" />
+          <div className="absolute left-[6%] right-[6%] top-6.25 hidden h-px bg-white/12 md:block" />
 
           <div className="grid grid-cols-3 gap-4 md:grid-cols-6 md:gap-3">
             {processSteps.map((step, index) => {
@@ -287,10 +287,10 @@ const ProcessSection = () => {
               animate="animate"
               exit="exit"
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="relative w-full lg:mr-14 max-w-90 lg:max-w-[590px] justify-self-end"
+              className="relative w-full lg:mr-14 max-w-90 lg:max-w-147.5 justify-self-end"
             >
               <div
-                className="relative min-h-[220px] overflow-hidden rounded-3xl border p-5 shadow-2xl sm:min-h-[240px] sm:p-6"
+                className="relative min-h-55 overflow-hidden rounded-3xl border p-5 shadow-2xl sm:min-h-60 sm:p-6"
                 style={{
                   background: `linear-gradient(135deg, ${activeStep.bg}, rgba(5,5,5,0.96))`,
                   borderColor: activeStep.border,
@@ -303,7 +303,7 @@ const ProcessSection = () => {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="absolute bottom-[20%] left-[13%] h-14 w-14 rounded-full bg-white/[0.075] shadow-[inset_0_0_24px_rgba(255,255,255,0.04)] sm:h-16 sm:w-16"
+                  className="absolute bottom-[20%] left-[13%] h-14 w-14 rounded-full bg-white/7.5 shadow-[inset_0_0_24px_rgba(255,255,255,0.04)] sm:h-16 sm:w-16"
                 />
 
                 <motion.div
@@ -313,10 +313,10 @@ const ProcessSection = () => {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="absolute right-[13%] top-[22%] h-16 w-16 rounded-full bg-white/[0.075] shadow-[inset_0_0_24px_rgba(255,255,255,0.04)] sm:h-20 sm:w-20"
+                  className="absolute right-[13%] top-[22%] h-16 w-16 rounded-full bg-white/7.5 shadow-[inset_0_0_24px_rgba(255,255,255,0.04)] sm:h-20 sm:w-20"
                 />
 
-                <div className="relative z-10 flex min-h-[178px] flex-col items-center justify-center text-center sm:min-h-[195px]">
+                <div className="relative z-10 flex min-h-44.5 flex-col items-center justify-center text-center sm:min-h-48.75">
                   <motion.div
                     initial={{ scale: 0.92, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}

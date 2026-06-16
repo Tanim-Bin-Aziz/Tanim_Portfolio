@@ -66,7 +66,7 @@ const projects: Project[] = [
     description:
       "A full-stack restaurant management platform with order processing, table reservations, menu management, kitchen workflow, billing system, and admin dashboard.",
     technologies: ["Next.js", "Node.js", "PostgreSQL", "TypeScript"],
-    liveLink: "",
+    liveLink: "https://restaurant-test-self.vercel.app",
     codeLink: "https://github.com/yourgithub/restaurant-management",
     image:
       "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1200",

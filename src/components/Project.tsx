@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Clock, CheckCircle2, Lightbulb, type LucideIcon } from "lucide-react";
 
@@ -61,13 +62,14 @@ const projects: Project[] = [
     status: "completed",
   },
   {
-    title: "HealthCare Server",
+    title: "E-Commerce Multi Vendor Platform",
     description:
-      "Backend API for the healthcare platform with a TypeScript codebase, Prisma setup, REST APIs, and file upload support.",
-    technologies: ["Node.js", "TypeScript", "Prisma", "REST API"],
+      "A scalable full-stack e-commerce platform with vendor dashboards, payment integration, product management, authentication, and admin controls.",
+    technologies: ["Next.js", "Node.js", "MongoDB", "Stripe", "TypeScript"],
     liveLink: "",
-    codeLink: "https://github.com/Tanim-Bin-Aziz/health_server",
-    image: "/images/projects/backend project.png",
+    codeLink: "https://github.com/yourgithub/ecommerce",
+    image:
+      "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1200",
     status: "completed",
   },
   {
@@ -79,6 +81,16 @@ const projects: Project[] = [
     codeLink: "https://github.com/Tanim-Bin-Aziz/transport_frontend",
     image:
       "https://images.pexels.com/photos/32322673/pexels-photo-32322673.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    status: "completed",
+  },
+  {
+    title: "HealthCare Server",
+    description:
+      "Backend API for the healthcare platform with a TypeScript codebase, Prisma setup, REST APIs, and file upload support.",
+    technologies: ["Node.js", "TypeScript", "Prisma", "REST API"],
+    liveLink: "",
+    codeLink: "https://github.com/Tanim-Bin-Aziz/health_server",
+    image: "/images/projects/backend project.png",
     status: "completed",
   },
 ];
@@ -200,6 +212,9 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
+  const [showMore, setShowMore] = useState(false);
+
+  const visibleProjects = showMore ? projects : projects.slice(0, 3);
   return (
     <section id="projects" className="min-h-screen px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -221,10 +236,18 @@ const Projects = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
         </div>
+      </div>
+      <div className="mt-10 flex justify-center">
+        <button
+          onClick={() => setShowMore(!showMore)}
+          className="rounded-xl border border-[#C3CC9B]/30 bg-white/5 px-6 py-3 text-sm font-medium text-[#E7EDC8] backdrop-blur-xl transition-all duration-300 hover:bg-white/10"
+        >
+          {showMore ? "Show Less" : "View More"}
+        </button>
       </div>
     </section>
   );

@@ -62,14 +62,14 @@ const projects: Project[] = [
     status: "completed",
   },
   {
-    title: "E-Commerce Multi Vendor Platform",
+    title: "Restaurant Management System",
     description:
-      "A scalable full-stack e-commerce platform with vendor dashboards, payment integration, product management, authentication, and admin controls.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Stripe", "TypeScript"],
+      "A full-stack restaurant management platform with order processing, table reservations, menu management, kitchen workflow, billing system, and admin dashboard.",
+    technologies: ["Next.js", "Node.js", "PostgreSQL", "TypeScript"],
     liveLink: "",
-    codeLink: "https://github.com/yourgithub/ecommerce",
+    codeLink: "https://github.com/yourgithub/restaurant-management",
     image:
-      "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1200",
     status: "completed",
   },
   {

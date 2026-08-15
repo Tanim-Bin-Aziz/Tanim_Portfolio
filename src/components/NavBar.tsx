@@ -134,7 +134,7 @@ const Navbar = () => {
             className="group inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-(--accent)/35 bg-(--accent)/15 px-4 py-2 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] transition-all duration-300 hover:bg-(--accent) hover:text-[#071717]"
           >
             <Download className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
-            Download Resume
+            Resume
           </a>
         </div>
 

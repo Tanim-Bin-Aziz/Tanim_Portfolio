@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 type SkillItem = {
@@ -41,17 +41,37 @@ const shuffleArray = (arr: SkillItem[]): SkillItem[] => {
 
 const Skill = () => {
   const [cards, setCards] = useState<SkillItem[]>(skills);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const isVisibleRef = useRef(true);
+
+  // Shuffle animation ta shudhu tokhoni chole jokhon card ta screen-e dekha
+  // jache ebong tab active - offscreen/background-e CPU o memory bachbe
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisibleRef.current = entry.isIntersecting;
+      },
+      { threshold: 0.15 },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const interval = window.setInterval(() => {
+      if (document.hidden || !isVisibleRef.current) return;
       setCards((prev) => shuffleArray(prev));
-    }, 3000);
+    }, 3500);
 
     return () => window.clearInterval(interval);
   }, []);
 
   return (
-    <section className="w-full">
+    <section ref={sectionRef} className="w-full">
       <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-4 sm:gap-3 lg:grid-cols-5 lg:gap-4">
         <AnimatePresence>
           {cards.map((item) => (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Search,
@@ -141,12 +141,31 @@ const cardVariants = {
 
 const ProcessSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const isVisibleRef = useRef(true);
 
   const activeStep = processSteps[activeIndex];
   const ActiveIcon = activeStep.icon;
 
   useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisibleRef.current = entry.isIntersecting;
+      },
+      { threshold: 0.15 },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     const interval = window.setInterval(() => {
+      // Section-ta viewport-e na thakle ba tab background-e gele autoplay off
+      if (document.hidden || !isVisibleRef.current) return;
       setActiveIndex((prev) => (prev + 1) % processSteps.length);
     }, 3600);
 
@@ -155,6 +174,7 @@ const ProcessSection = () => {
 
   return (
     <section
+      ref={sectionRef}
       id="about"
       className="relative overflow-hidden bg-transparent px-5 py-12 text-white sm:px-6 lg:px-10 xl:px-14"
     >

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/NavBar";
 import ParticleNetwork from "@/components/ParticleNetwork";
+import Preloader from "@/components/Preloader";
 import ProcessSection from "@/components/ProcessSection";
 import Projects from "@/components/Project";
 import type { Metadata } from "next";
@@ -54,6 +55,7 @@ const HomePage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <Preloader />
       <ParticleNetwork />
       <Navbar />
       <Hero />

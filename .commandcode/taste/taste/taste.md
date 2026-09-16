@@ -8,3 +8,4 @@
 - Prefers real, live data over mocked or randomly generated placeholder content (e.g., replacing a fake PRNG-based contribution graph with actual account data). Confidence: 0.6
 - Reports problems by pasting raw terminal/error output verbatim (e.g., a stack trace or dev-server 500 log) rather than describing them in prose, expecting the agent to diagnose and fix from the log. Confidence: 0.6
 - Prefers proper icon components (from an icon library or hand-rolled SVGs) over emoji characters used as UI icons; is open to whichever source, so brand/semantic accuracy and consistency matter more than the specific library. Confidence: 0.55
+- Prefers the smallest change that fixes the actual underlying problem (e.g., correcting a broken asset path) over larger refactors, format conversions, or framework upgrades that were not requested. Confidence: 0.5

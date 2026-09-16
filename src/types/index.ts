@@ -1,7 +1,9 @@
+import type { LucideIcon } from "lucide-react";
+
 export interface Skill {
   name: string;
   color: string;
-  icon: string;
+  icon: LucideIcon;
 }
 
 export interface Project {

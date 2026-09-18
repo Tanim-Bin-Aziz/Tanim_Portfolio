@@ -22,6 +22,7 @@ export interface Experience {
   period: string;
   title: string;
   bullets: string[];
+  confidential?: boolean;
 }
 
 export interface SocialLink {

@@ -29,17 +29,23 @@ export default function Experience() {
               <span className="exp-period">{exp.period}</span>
             </div>
 
-            <p className="exp-role">
-              {exp.role} – {exp.stack}
-            </p>
+            {exp.confidential ? (
+              <p className="exp-role">Confidential</p>
+            ) : (
+              <>
+                <p className="exp-role">
+                  {exp.role} – {exp.stack}
+                </p>
 
-            <p className="exp-title">{exp.title}</p>
+                <p className="exp-title">{exp.title}</p>
 
-            <ul className="exp-list">
-              {exp.bullets.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
-              ))}
-            </ul>
+                <ul className="exp-list">
+                  {exp.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
         </article>
       ))}

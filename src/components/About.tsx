@@ -13,22 +13,15 @@ export default function About() {
       <p className="section-label">About</p>
 
       <p className="body-text">
-        Full-stack developer specializing in creating modern, high-performance, and
-        responsive web applications. I work with{" "}
-        {highlights.map((tech, i) => (
-          <span key={tech}>
-            <span className="underline-link">{tech}</span>
-            {i < highlights.length - 2 ? ", " : i === highlights.length - 2 ? " and " : ""}
-          </span>
-        ))}
-        , and the modern web ecosystem.
+        Software Engineer with hands-on experience building responsive and scalable web
+        applications using React, Next.js, TypeScript, Node.js, Express.js, PostgreSQL,
+        and MySQL. Experienced in developing RESTful APIs, database management,
+        authentication, CRUD operations, and performance optimization.
       </p>
 
       <p className="body-text">
-        Autonomous across the entire project — from backend architecture to user
-        interface — I pay particular attention to code quality, performance, and user
-        experience. Curious and constantly learning, I enjoy exploring new technologies
-        to build concrete and sustainable solutions.
+        Experienced in developing maintainable full-stack features & collaborative
+        environments.
       </p>
     </section>
   );

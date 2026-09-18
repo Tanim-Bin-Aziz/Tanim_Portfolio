@@ -80,7 +80,7 @@ export default function BottomNav() {
       </a>
 
       <a
-        href="/resume.pdf"
+        href="/resume/Tanim Bin Aziz.pdf"
         className="nav-btn"
         aria-label="Download Resume"
         target="_blank"

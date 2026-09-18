@@ -1,11 +1,13 @@
 import { site } from "@/data/site";
 import { IconPin } from "@/components/icons";
-import LocalTime from "@/components/LocalTime";
 import SocialLinks from "@/components/SocialLinks";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Header() {
   return (
-    <header id="home" className="scroll-mt-24">
+    <header id="home" className="scroll-mt-24 reveal" data-reveal data-reveal-delay="0">
+      <ThemeToggle />
+
       <div className="header-top">
         <img className="avatar" src={site.avatar} alt={site.name} />
 
@@ -15,8 +17,6 @@ export default function Header() {
           <div className="meta">
             <IconPin />
             <span>{site.location}</span>
-            <span className="meta-dot">·</span>
-            <LocalTime />
           </div>
         </div>
       </div>

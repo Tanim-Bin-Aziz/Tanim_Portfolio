@@ -20,3 +20,8 @@
 - Uses Git workflows with branching, pull requests, and merging for collaboration. Confidence: 0.75
 - Prioritizes responsive design in all web applications. Confidence: 0.7
 - Uses Framer Motion for animations in React projects. Confidence: 0.65
+- Considers scroll-reveal entrance animations essential to their portfolio — treats them as a core feature rather than optional polish, and gets frustrated when they are removed or stop firing during debugging. Confidence: 0.75
+- Prefers bug fixes that preserve existing features and animations rather than stripping them out — expects the agent to find workarounds that maintain the full feature set (reports it as broken when animations or functional controls silently disappear). Confidence: 0.7
+- Values thorough SEO implementation for web projects — wants comprehensive metadata, Open Graph, Twitter cards, canonical URLs, robots.txt, and sitemap rather than minimal/placeholder SEO. Confidence: 0.6
+- Prefers a simple dark/light theme toggle over multiple color themes — explicitly rejected extra themes (midnight, sunset, purple, sea-green) in favor of just dark and light. Confidence: 0.8
+- Prefers animated icon-based switching for theme selection over toggle/slider controls — wants the icon itself to animate when changing themes. Confidence: 0.65

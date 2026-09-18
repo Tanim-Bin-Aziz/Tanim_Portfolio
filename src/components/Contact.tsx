@@ -4,7 +4,7 @@ export default function Contact() {
   const year = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="footer scroll-mt-24">
+    <footer id="contact" className="footer scroll-mt-24 reveal" data-reveal data-reveal-delay="600">
       <SocialLinks variant="pill" />
       <p className="copyright">© {year} My Portfolio. All rights reserved.</p>
     </footer>

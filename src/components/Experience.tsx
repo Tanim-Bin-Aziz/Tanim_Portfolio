@@ -13,7 +13,7 @@ export default function Experience() {
   const hasMore = experiences.length > VISIBLE_COUNT;
 
   return (
-    <section id="work" className="section scroll-mt-24">
+    <section id="work" className="section scroll-mt-24 reveal" data-reveal data-reveal-delay="200">
       <p className="section-label"><IconBriefcase />Professional experience</p>
 
       {visible.map((exp) => (

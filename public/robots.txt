@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tanim-bin-aziz.vercel.app/sitemap.xml

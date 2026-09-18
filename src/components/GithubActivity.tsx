@@ -15,7 +15,7 @@ export default async function GithubActivity() {
   const columnWidth = `(100% - ${columnCount - 1} * var(--contrib-gap)) / ${columnCount}`;
 
   return (
-    <section id="activity" className="section scroll-mt-24">
+    <section id="activity" className="section scroll-mt-24 reveal" data-reveal data-reveal-delay="400">
       <div className="section-head">
         <p className="section-label"><IconActivity />GitHub Activity</p>
         <a

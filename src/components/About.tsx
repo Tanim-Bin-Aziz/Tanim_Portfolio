@@ -9,7 +9,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section className="section">
+    <section className="section reveal" data-reveal data-reveal-delay="100">
       <p className="section-label">About</p>
 
       <p className="body-text">

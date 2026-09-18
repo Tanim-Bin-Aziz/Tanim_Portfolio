@@ -1,0 +1,22 @@
+# Taste
+- Prefers consistent sizing across page sections — all sections should match in width and visual weight. Confidence: 0.7
+- Prefers section labels to include icons alongside text for visual identity. Confidence: 0.8
+- Prefers smooth, fluid "liquid-style" hover animations over abrupt transitions (e.g., a sliding fill effect on hover). Confidence: 0.7
+- Prefers consistent accent color theming — related elements that share a brand/identity (e.g., a GitHub activity grid and its GitHub icon) should use the same accent color ramp rather than unrelated hues. Confidence: 0.75
+- Prefers uniform coloring within a group of sibling elements (e.g., all social-row icons one color) — individual items should not be singled out with a distinct accent color just because they share a brand with another, differently-styled feature. Confidence: 0.5
+- Prefers a compact, tight UI — spacing, sizing, and layout should be condensed rather than airy/spacious. Confidence: 0.5
+- Prefers real, live data over mocked or randomly generated placeholder content (e.g., replacing a fake PRNG-based contribution graph with actual account data). Confidence: 0.6
+- Reports problems by pasting raw terminal/error output verbatim (e.g., a stack trace or dev-server 500 log) rather than describing them in prose, expecting the agent to diagnose and fix from the log. Confidence: 0.6
+- Prefers proper icon components (from an icon library or hand-rolled SVGs) over emoji characters used as UI icons; is open to whichever source, so brand/semantic accuracy and consistency matter more than the specific library. Confidence: 0.55
+- Prefers the smallest change that fixes the actual underlying problem (e.g., correcting a broken asset path) over larger refactors, format conversions, or framework upgrades that were not requested. Confidence: 0.5
+- Prefers TypeScript with React and Next.js for frontend development — consistently uses this stack across professional projects. Confidence: 0.85
+- Prefers Tailwind CSS for styling — uses it consistently across all projects. Confidence: 0.85
+- Prefers Node.js and Express.js for backend development. Confidence: 0.8
+- Prefers PostgreSQL as the primary database; also works with MySQL, MongoDB, and SQLite. Confidence: 0.75
+- Prefers Prisma ORM for database management. Confidence: 0.7
+- Values performance optimization as a key priority — consistently measures and improves load times, API response times, and rendering efficiency. Confidence: 0.8
+- Prefers building reusable, maintainable components over one-off implementations. Confidence: 0.75
+- Prefers RESTful API design patterns. Confidence: 0.7
+- Uses Git workflows with branching, pull requests, and merging for collaboration. Confidence: 0.75
+- Prioritizes responsive design in all web applications. Confidence: 0.7
+- Uses Framer Motion for animations in React projects. Confidence: 0.65

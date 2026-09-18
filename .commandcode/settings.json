@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(Remove-Item:*)",
+      "Shell(rm:*)",
+      "powershell",
+      "Shell(npm:*)",
+      "Shell(node scripts/sync-github.mjs)",
+      "Shell(node \"C:\\Users\\USER\\AppData\\Local\\Temp\\commandcode\\C--Users-USER-Desktop-tanim-my-app\\75fe7807-4404-44bf-b023-efce2ea9b8a3\\scratchpad\\inspect.mjs\")",
+      "Shell(node -e const fs=require('fs');const h=fs.readFileSync('.next/server/app/index.html','utf8');const m=h.match(/[\\d,]+ contributions in the last year/);console.log('CONTRIBS:',m&&m[0]);const n=h.match(/@Tanim-Bin-Aziz/g);console.log('HANDLE COUNT:',n?n.length:0);const g=h.match(/https:\\/\\/github\\.com\\/Tanim-Bin-Aziz/g);console.log('REAL GH LINKS:',g?g.length:0);const bad=h.match(/tanimbinaziz/g);console.log('OLD BROKEN LINKS:',bad?bad.length:0);const cells=(h.match(/class=\"contrib-cell\"/g)||[]).length;console.log('CELLS RENDERED:',cells);)",
+      "Shell(cd \"C:\\Users\\USER\\Desktop\\tanim\\my-app\" && node -e \"const fs=require('fs');const h=fs.readFileSync('.next/server/app/index.html','utf8');const m=h.match(/section-link[^>]*>([^<]*)</);console.log('SECTION LINK TEXT:',m&&m[1]);const t=h.match(/contrib-footer[\\s\\S]{0,400}/);console.log('FOOTER:',t&&t[0].replace(/\\s+/g,' '));\")",
+      "Shell(node -e const fs=require('fs');const h=fs.readFileSync('.next/server/app/index.html','utf8');for(let i=0;i<5;i++){const re=new RegExp('var\\\\(--contrib-'+i+'\\\\)','g');console.log('contrib-'+i+':',(h.match(re)||[]).length);}console.log('purple github icon:',(h.match(/icon-github/g)||[]).length);)",
+      "Shell(node \"C:\\Users\\USER\\AppData\\Local\\Temp\\commandcode\\C--Users-USER-Desktop-tanim-my-app\\75fe7807-4404-44bf-b023-efce2ea9b8a3\\scratchpad\\verify.mjs\")",
+      "Shell(node \"C:\\Users\\USER\\AppData\\Local\\Temp\\commandcode\\C--Users-USER-Desktop-tanim-my-app\\75fe7807-4404-44bf-b023-efce2ea9b8a3\\scratchpad\\verify-projects.mjs\")",
+      "Shell(node -e const fs=require('fs');const h=fs.readFileSync('.next/server/app/index.html','utf8');const i=h.indexOf('id=\"projects\"');const seg=h.slice(i, i+60000);const j=seg.indexOf('see-more');console.log('PROJECTS TOGGLE:', JSON.stringify(seg.slice(j, j+90).replace(/<[^>]*>/g,'|')));console.log('has Show more:', seg.includes('Show more'));)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

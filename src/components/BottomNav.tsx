@@ -4,23 +4,11 @@ import { useCallback, useEffect, useState } from "react";
 import {
   IconDownload,
   IconHome,
-  IconMoon,
-  IconSun,
   IconFolder,
 } from "@/components/icons";
 
-type Theme = "dark" | "light";
-
 export default function BottomNav() {
   const [active, setActive] = useState<string>("home");
-  const [theme, setTheme] = useState<Theme>("dark");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    const current = (document.documentElement.dataset.theme as Theme) || "dark";
-    setTheme(current);
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -42,19 +30,6 @@ export default function BottomNav() {
 
   const scrollTo = useCallback((id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
-
-  const toggleTheme = useCallback(() => {
-    setTheme((prev) => {
-      const next: Theme = prev === "dark" ? "light" : "dark";
-      document.documentElement.dataset.theme = next;
-      try {
-        localStorage.setItem("theme", next);
-      } catch {
-        /* private mode */
-      }
-      return next;
-    });
   }, []);
 
   return (
@@ -89,18 +64,6 @@ export default function BottomNav() {
         <span className="nav-btn-bg" aria-hidden />
         <IconDownload />
       </a>
-
-      <span className="nav-divider" aria-hidden />
-
-      <button
-        type="button"
-        className="nav-btn"
-        aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
-        onClick={toggleTheme}
-      >
-        <span className="nav-btn-bg" aria-hidden />
-        {mounted && theme === "light" ? <IconSun /> : <IconMoon />}
-      </button>
     </nav>
   );
 }

@@ -3,7 +3,7 @@ import { IconZap } from "@/components/icons";
 
 export default function Skills() {
   return (
-    <section id="skills" className="section scroll-mt-24">
+    <section id="skills" className="section scroll-mt-24 reveal" data-reveal data-reveal-delay="500">
       <p className="section-label"><IconZap />My Skills</p>
 
       <ul className="skill-grid">

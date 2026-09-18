@@ -5,6 +5,7 @@ import Experience from "@/components/Experience";
 import GithubActivity from "@/components/GithubActivity";
 import Header from "@/components/Header";
 import Projects from "@/components/Projects";
+import RevealScript from "@/components/RevealScript";
 import Skills from "@/components/Skills";
 
 export default function Page() {
@@ -21,6 +22,7 @@ export default function Page() {
       </main>
 
       <BottomNav />
+      <RevealScript />
     </div>
   );
 }

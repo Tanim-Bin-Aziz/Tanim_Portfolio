@@ -17,13 +17,70 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: `${site.name} — ${site.role}`,
+  title: {
+    default: `${site.name} — ${site.role}`,
+    template: `%s | ${site.name}`,
+  },
   description:
-    "Full-stack developer specializing in modern, high-performance and responsive web applications with React, Next.js, TypeScript and Node.js.",
+    "Software Engineer with hands-on experience building responsive and scalable web applications using React, Next.js, TypeScript, Node.js, Express.js, PostgreSQL, and MySQL.",
+  keywords: [
+    "Tanim Bin Aziz",
+    "Software Engineer",
+    "Full Stack Developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "MySQL",
+    "Web Development",
+    "Dhaka",
+    "Bangladesh",
+  ],
+  authors: [{ name: site.name }],
+  creator: site.name,
+  publisher: site.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: `${site.name} — ${site.role}`,
-    description: "Full-stack developer based in Dhaka, Bangladesh.",
+    description:
+      "Software Engineer with hands-on experience building responsive and scalable web applications using React, Next.js, TypeScript, Node.js, Express.js, PostgreSQL, and MySQL.",
+    url: site.website,
+    siteName: site.name,
+    images: [
+      {
+        url: site.avatar,
+        width: 400,
+        height: 400,
+        alt: site.name,
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} — ${site.role}`,
+    description:
+      "Software Engineer with hands-on experience building responsive and scalable web applications.",
+    images: [site.avatar],
+  },
+  icons: {
+    icon: "/images/application-coding-terminal-svgrepo-com.svg",
+  },
+  alternates: {
+    canonical: site.website,
   },
 };
 
@@ -31,6 +88,10 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+  ],
 };
 
 /**
@@ -40,7 +101,8 @@ const themeScript = `
 (function () {
   try {
     var stored = localStorage.getItem('theme');
-    var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var valid = ['dark','light'];
+    var theme = valid.indexOf(stored) !== -1 ? stored : 'dark';
     document.documentElement.dataset.theme = theme;
   } catch (e) {
     document.documentElement.dataset.theme = 'dark';

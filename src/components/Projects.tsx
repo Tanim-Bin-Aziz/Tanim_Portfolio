@@ -13,7 +13,7 @@ export default function Projects() {
   const hasMore = projects.length > VISIBLE_COUNT;
 
   return (
-    <section id="projects" className="section scroll-mt-24">
+    <section id="projects" className="section scroll-mt-24 reveal" data-reveal data-reveal-delay="300">
       <p className="section-label"><IconFolder />My Projects</p>
 
       <div className="project-list">

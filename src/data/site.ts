@@ -10,7 +10,7 @@ export const site = {
   location: "Dhaka, Bangladesh",
   timeZone: "Asia/Dhaka",
   timeZoneLabel: "GMT+6",
-  avatar: "/images/avatar.jpeg",
+  avatar: "/images/tanim-bin-aziz.webp",
   github: profile.github,
   website: profile.blog,
   publicRepos: profile.publicRepos,

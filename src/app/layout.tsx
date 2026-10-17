@@ -17,6 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.website),
   title: {
     default: `${site.name} — ${site.role}`,
     template: `%s | ${site.name}`,
@@ -60,9 +61,9 @@ export const metadata: Metadata = {
     siteName: site.name,
     images: [
       {
-        url: site.avatar,
-        width: 400,
-        height: 400,
+        url: "/og/tanim-bin-aziz-portfolio.jpg",
+        width: 1200,
+        height: 630,
         alt: site.name,
       },
     ],
@@ -74,10 +75,10 @@ export const metadata: Metadata = {
     title: `${site.name} — ${site.role}`,
     description:
       "Software Engineer with hands-on experience building responsive and scalable web applications.",
-    images: [site.avatar],
+    images: ["/og/tanim-bin-aziz-portfolio.jpg"],
   },
   icons: {
-    icon: "/images/application-coding-terminal-svgrepo-com.svg",
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
   alternates: {
     canonical: site.website,

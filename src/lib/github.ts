@@ -19,6 +19,7 @@ export async function getContributionData(): Promise<ContributionData> {
   try {
     const res = await fetch(`${CONTRIBUTIONS_API}/${USERNAME}?y=last`, {
       next: { revalidate: REVALIDATE_SECONDS },
+      signal: AbortSignal.timeout(5000),
     });
     if (!res.ok) throw new Error(`contributions api ${res.status}`);
 

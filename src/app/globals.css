@@ -6,6 +6,9 @@
 :root,
 :root[data-theme="dark"] {
   --bg: #0a0a0a;
+  --bg-top: #171129;
+  --bg-glow-1: rgba(167, 139, 250, 0.2);
+  --bg-glow-2: rgba(124, 58, 237, 0.14);
   --bg-card: #0e0e0e;
   --bg-pill: #161616;
   --border: #262626;
@@ -26,6 +29,9 @@
 
 :root[data-theme="light"] {
   --bg: #fafafa;
+  --bg-top: #f1ecff;
+  --bg-glow-1: rgba(124, 58, 237, 0.1);
+  --bg-glow-2: rgba(167, 139, 250, 0.16);
   --bg-card: #ffffff;
   --bg-pill: #ffffff;
   --border: #e5e5e5;
@@ -74,7 +80,6 @@ body {
     opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform;
 }
 
 .reveal.reveal-visible {
@@ -89,7 +94,6 @@ body {
     opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform;
 }
 
 .reveal-scale.reveal-visible {
@@ -104,7 +108,6 @@ body {
     opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform;
 }
 
 .reveal-left.reveal-visible {
@@ -119,7 +122,6 @@ body {
     opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform;
 }
 
 .reveal-right.reveal-visible {
@@ -135,7 +137,6 @@ body {
     opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: calc(var(--reveal-delay, 0ms) + var(--stagger-index, 0) * 80ms);
-  will-change: opacity, transform;
 }
 
 .reveal-stagger.reveal-visible > * {
@@ -172,9 +173,10 @@ body {
 .grid-bg {
   background-color: var(--bg);
   background-image:
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 32px 32px;
+    radial-gradient(60rem 44rem at 50% -14%, var(--bg-glow-1), transparent 60%),
+    radial-gradient(46rem 34rem at 100% -6%, var(--bg-glow-2), transparent 58%),
+    linear-gradient(180deg, var(--bg-top) 0px, var(--bg) 900px);
+  background-repeat: no-repeat;
   min-height: 100vh;
   min-height: 100dvh;
   overflow-x: clip;

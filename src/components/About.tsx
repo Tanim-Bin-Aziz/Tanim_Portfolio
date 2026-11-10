@@ -1,12 +1,3 @@
-const highlights = [
-  "React",
-  "Tailwind CSS",
-  "TypeScript",
-  "Next.js",
-  "Node.js",
-  "Express.js",
-];
-
 export default function About() {
   return (
     <section className="section reveal" data-reveal data-reveal-delay="100">

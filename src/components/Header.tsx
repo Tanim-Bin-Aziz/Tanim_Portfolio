@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { site } from "@/data/site";
 import { IconPin } from "@/components/icons";
 import SocialLinks from "@/components/SocialLinks";
@@ -9,7 +10,7 @@ export default function Header() {
       <ThemeToggle />
 
       <div className="header-top">
-        <img className="avatar" src={site.avatar} alt={site.name} />
+        <Image className="avatar" src={site.avatar} alt={site.name} width={80} height={80} priority />
 
         <div>
           <h1 className="name">{site.name}</h1>

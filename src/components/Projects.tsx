@@ -4,7 +4,7 @@ import { useState } from "react";
 import { projects } from "@/data/projects";
 import { IconDoc, IconExternal, IconFolder, IconGithub } from "@/components/icons";
 
-const VISIBLE_COUNT = 3;
+const VISIBLE_COUNT = 2;
 
 export default function Projects() {
   const [expanded, setExpanded] = useState(false);

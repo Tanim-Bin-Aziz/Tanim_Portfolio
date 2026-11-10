@@ -47,6 +47,8 @@ export default async function GithubActivity() {
         {/* Grid */}
         <div
           className="contrib-grid"
+          role="img"
+          aria-label={`${total.toLocaleString("en-US")} contributions in the last year`}
           style={{ gridTemplateColumns: `repeat(${columnCount}, minmax(0, 1fr))` }}
         >
           {weeks.flat().map((day) => (

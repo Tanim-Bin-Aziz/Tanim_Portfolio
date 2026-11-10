@@ -30,7 +30,7 @@ export default function Experience() {
             </div>
 
             {exp.confidential ? (
-              <p className="exp-role">Confidential</p>
+              <p className="exp-role">Classified</p>
             ) : (
               <>
                 <p className="exp-role">

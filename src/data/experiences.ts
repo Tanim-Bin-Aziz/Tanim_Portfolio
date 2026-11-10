@@ -2,10 +2,10 @@ import type { Experience } from "@/types";
 
 export const experiences: Experience[] = [
   {
-    company: "Trust Innovation Ltd [ Bangladesh Army Welfare ]",
+    company: "Bangladesh Army Welfare Trust",
     role: "Software Engineer",
     stack: "React, Node.js, PostgreSQL",
-    period: "Sep 2026 – Present",
+    period: "Present",
     title: "Web Platform Development",
     bullets: [
       "Built and maintained scalable web applications using React and Node.js.",
@@ -17,11 +17,11 @@ export const experiences: Experience[] = [
   {
     company: "Synex Digital",
     role: "Software Engineer",
-    stack: "Next.js, Node.js, Express.js, PostgreSQL, Laravel",
+    stack: "Next.js, Node.js, Express.js, PostgreSQL",
     period: "Dec 2025 – Present",
     title: "Full Stack Developer",
     bullets: [
-      "Built and maintained full-stack features for healthcare and management systems using Next.js, Node.js, Express.js, PostgreSQL, and Laravel, improving application performance by 25% and reducing API response time by 30%.",
+      "Built and maintained full-stack features for healthcare and management systems using Next.js, Node.js, Express.js, and PostgreSQL, improving application performance by 25% and reducing API response time by 30%.",
       "Developed and integrated 15+ RESTful API endpoints for authentication, appointment scheduling, and data management, reducing data inconsistency issues and improving system reliability.",
       "Optimized UI performance by implementing reusable components and efficient state management, decreasing page load time by 20% and enhancing overall user experience.",
     ],

@@ -4,7 +4,7 @@
 - Prefers smooth, fluid "liquid-style" hover animations over abrupt transitions (e.g., a sliding fill effect on hover). Confidence: 0.7
 - Prefers consistent accent color theming — related elements that share a brand/identity (e.g., a GitHub activity grid and its GitHub icon) should use the same accent color ramp rather than unrelated hues. Confidence: 0.75
 - Prefers uniform coloring within a group of sibling elements (e.g., all social-row icons one color) — individual items should not be singled out with a distinct accent color just because they share a brand with another, differently-styled feature. Confidence: 0.5
-- Prefers a compact, tight UI — spacing, sizing, and layout should be condensed rather than airy/spacious. Confidence: 0.5
+- Prefers a compact, tight UI — spacing, sizing, and layout should be condensed rather than airy/spacious; e.g. status tags/badges should be small (small font, tight padding, modest corner radius) rather than chunky rounded pills. Confidence: 0.65
 - Prefers real, live data over mocked or randomly generated placeholder content (e.g., replacing a fake PRNG-based contribution graph with actual account data). Confidence: 0.6
 - Reports problems by pasting raw terminal/error output verbatim (e.g., a stack trace or dev-server 500 log) rather than describing them in prose, expecting the agent to diagnose and fix from the log. Confidence: 0.6
 - Prefers proper icon components (from an icon library or hand-rolled SVGs) over emoji characters used as UI icons; is open to whichever source, so brand/semantic accuracy and consistency matter more than the specific library. Confidence: 0.55
@@ -26,3 +26,4 @@
 - Prefers a simple dark/light theme toggle over multiple color themes — explicitly rejected extra themes (midnight, sunset, purple, sea-green) in favor of just dark and light. Confidence: 0.8
 - Prefers animated icon-based switching for theme selection over toggle/slider controls — wants the icon itself to animate when changing themes. Confidence: 0.65
 - Prefers plain, static CSS backgrounds (soft brand-colored gradient) over novelty animated canvas effects — asked for a pointer-reactive ASCII mouse-trail backdrop to be removed entirely in favor of a simple gradient. Confidence: 0.55
+- Prefers subdued, very dark, low-saturation color treatments in dark mode — pushed back on a bright lavender gradient top, wanting "very low color, not bright, dark dark", i.e. barely-there tinted glows over vivid accent blocks. Confidence: 0.6

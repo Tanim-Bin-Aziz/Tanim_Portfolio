@@ -18,7 +18,7 @@ export const experiences: Experience[] = [
     company: "Synex Digital",
     role: "Software Engineer",
     stack: "Next.js, Node.js, Express.js, PostgreSQL",
-    period: "Dec 2025 – Present",
+    period: "Oct 2025 – Jun 2026",
     title: "Full Stack Developer",
     bullets: [
       "Built and maintained full-stack features for healthcare and management systems using Next.js, Node.js, Express.js, and PostgreSQL, improving application performance by 25% and reducing API response time by 30%.",
@@ -30,7 +30,7 @@ export const experiences: Experience[] = [
     company: "Synex Digital",
     role: "Software Engineer Intern",
     stack: "React, Node.js, Express.js, PostgreSQL",
-    period: "July 2025 – Nov 2025",
+    period: "Jun 2025 – Sep 2025",
     title: "Intern",
     bullets: [
       "Assisted in building frontend interfaces and backend APIs for real-world applications, contributing to 3+ production-level modules across healthcare and management systems.",
